@@ -1,52 +1,53 @@
-<script>
+<script lang="js">
+    import Navbar from "./navbar.svelte";
+    import Footer from "./footer.svelte";
 
-    import MyLovelyNavbar from "./navbar.svelte";
+    let quote = "rico adalah rico";
+    let author = "-MIkel";
 
-    let a = "skibidi";
-    let randompic = "https://preview.redd.it/yall-i-drew-the-travis-scott-fish-v0-xxlhlp5gbs591.jpg?width=640&crop=smart&auto=webp&s=8b6ec5245a685d602e9ae4e3b7479d90002845f4";
-    let o = 0;
+    let count = 0;
 
-    
-    
-    function skibidi()
-    {
-        o++;
-        if (o == 50) 
-        {
-            alert("Nenjah");
-            o = 0; 
+    function alertButton() {
+        count++
+        if (count > 5) {
+            window.alert("nengah");
+            count = 0;
         }
     }
-
 </script>
 
+<Navbar />
+
+<section class="container">
+
+    <!-- Main shit -->
+    <div class="quotes mt-5">
+        <article>{quote}</article>
+        <cite>{author}</cite>
+    </div>
+
+    
+</section>
+
+
+<!-- Buttons -->
+<button on:click={() => alertButton() } class=" border-3 bg-black text-white p-4 mt-6 rounded-2xl hover:bg-pink-300 transition-all duration-300">
+    Click Me Daddy, I've been clicked by {count}
+</button>
+
+<video controls autoplay loop muted class=" pt-6 size-150">
+    <source src="/video/ommartin.mp4" type="video/mp4">
+    SAYANGGGGGGGGGGGGGGGGGGGG
+</video>
+
+<Footer />
+
+
+
 <style>
-    h1 {
-        align-items: center;
-        justify-content: center;
-        font-size: 30px;
-        font-weight: 700;
-        color: red;
+    * {
+        font-family: 'Poppins', Arial, Helvetica, sans-serif;
+        /* font-family: "Pixelify Sans", sans-serif;    */
     }
+
 </style>
-
-<div class="container " >
-    <MyLovelyNavbar />
-
-    <h1>tailwind hilang</h1>
-    <p>Lorem udin udin udin ipsum dolor sit amet consectetur adipisicing elit. 
-        Veritatis nostrum eos voluptatibus magnam alias maxime. Assumenda 
-        voluptatem nulla eum aliquid, maxime dolorem porro sunt facere reiciendis libero, 
-        architecto beatae saepe.</p>
-
-    <img src={randompic} alt="">
-
-    <button on:click={skibidi} class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-        Click Me {o}
-    </button>
-
-    <video controls autoplay loop muted>
-        <source src="/video/ommartin.mp4" type="video/mp4"/>
-        sayangggggggggggggggggggggggggggggggggggggggggggggggg
-    </video>
-</div>
