@@ -16,32 +16,29 @@
     }
 </script>
 
+
 <Navbar />
 
 <section class="container">
-
     <!-- Main shit -->
-    <div class="quotes mt-5">
+    <!-- <div class="quotes mt-5">
         <article>{quote}</article>
         <cite>{author}</cite>
-    </div>
+    </div> -->
 
-    
+    <!-- Buttons -->
+    <!-- <button on:click={() => alertButton() } class=" border-3 bg-black text-white p-4 mt-6 rounded-2xl hover:bg-pink-300 transition-all duration-300">
+        Click Me Daddy, I've been clicked by {count}
+    </button> -->
+
+    <!-- <video controls loop muted class=" pt-6 size-150">
+        <source src="/video/ommartin.mp4" type="video/mp4">
+        SAYANGGGGGGGGGGGGGGGGGGGG
+    </video> -->
+
 </section>
 
-
-<!-- Buttons -->
-<button on:click={() => alertButton() } class=" border-3 bg-black text-white p-4 mt-6 rounded-2xl hover:bg-pink-300 transition-all duration-300">
-    Click Me Daddy, I've been clicked by {count}
-</button>
-
-<video controls autoplay loop muted class=" pt-6 size-150">
-    <source src="/video/ommartin.mp4" type="video/mp4">
-    SAYANGGGGGGGGGGGGGGGGGGGG
-</video>
-
 <Footer />
-
 
 
 <style>
